@@ -65,8 +65,8 @@ $(document).ready(function() {
 
 
         document.onkeyup = function(event) {
-        	
-        	if (event.code == "Escape") {
+
+            if (event.code == "Escape") {
                 // restrarts game, clears guesses and gets a new word
                 hangman.empty();
                 newWord();
@@ -89,7 +89,7 @@ $(document).ready(function() {
                 };
 
 
-                
+
 
                 var y = 0;
                 // checks guess against the answer, if its correct , adds the guess to the solution area
@@ -117,11 +117,11 @@ $(document).ready(function() {
 
                 guessP.html(letterArr);
 
-                if (x == 1){
-                	guessP.append("<br>" + "Stop pressing that one, brother.")
+                if (x == 1) {
+                    guessP.append("<br>" + "Stop pressing that one, brother.")
                 };
 
-
+                // checks win conditions
                 if (wordArr.toString() == wordShow.toString()) {
                     hangman.empty();
                     hangman.append(wordShow);
@@ -129,13 +129,7 @@ $(document).ready(function() {
                     playerP.html("You Win! Press 'Esc' to replay!" + "<br>" + "Wins: " + winCount + "<br>" + "Losses: " + lossCount);
                     playerLives = 0;
                 };
-
             };
-
-
-
-            // checks win conditions
-
         };
     });
 });
